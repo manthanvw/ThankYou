@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Thank You Page</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+    <style>
+        body {
+	font-family: 'Open Sans', sans-serif;
+	color: #333;
+	background-color: #f7f7f7;
+	margin: 0;
+	padding: 0;
+}
+
+header {
+	background-color: #3498db;
+	color: #fff;
+	padding: 1em;
+	text-align: center;
+	animation: fadeInDown 1s ease;
+}
+
+@keyframes fadeInDown {
+	from {
+		opacity: 0;
+		transform: translateY(-20px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+h1 {
+	font-size: 3em;
+	margin: 0;
+	animation: fadeIn 1s ease;
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+		transform: scale(0.5);
+	}
+	to {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+
+main {
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 2em;
+	animation: fadeInUp 1s ease;
+}
+
+@keyframes fadeInUp {
+	from {
+		opacity: 0;
+		transform: translateY(20px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+section {
+	margin-bottom: 2em;
+}
+
+h2 {
+	font-size: 2em;
+	margin-top: 0;
+	animation: fadeIn 1s ease;
+}
+
+p {
+	font-size: 1.2em;
+	line-height: 1.5;
+	animation: fadeIn 1s ease;
+}
+
+ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+li {
+	margin-bottom: 1em;
+	animation: fadeIn 1s ease;
+}
+
+button {
+	background-color: #3498db;
+	color: #fff;
+	border: none;
+	padding: 1em 2em;
+	font-size: 1.2em;
+	cursor: pointer;
+	animation: fadeIn 1s ease;
+}
+
+button:hover {
+	background-color: #2980b9;
+}
+
+img {
+	max-width: 100%;
+	/* height: auto; */
+	margin-bottom: 1em;
+	animation: fadeIn 1s ease;
+}
+
+footer {
+	background-color: #333;
+	color: #fff;
+	padding: 1em;
+	text-align: center;
+	animation: fadeInUp 1s ease;
+}
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.image-grid img {
+  max-width: 100%;
+  /* height: auto; */
+}
+
+@media screen and (max-width: 600px) {
+	h1 {
+		font-size: 2em;
+	}
+	
+	h2 {
+		font-size: 1.5em;
+	}
+	
+	p {
+		font-size: 1em;
+	}
+	
+	button {
+		font-size: 1em;
+		padding: 0.5em 1em;
+	}
+}
+
+    </style>
+</head>
+<body>
+	<div class="" id="content"></div>
+	<script>
+	let name = prompt("What's your name?");
+	if(name === null) name = "You"
+        text = `
+	<header>
+		<h1>Thank You!</h1>
+	</header>
+	<main>
+		<section>
+			<p><b>Hey ${name},</b><br/>
+                Just wanted to drop a quick note to say thank you for the wonderful birthday wishes!
+                <br>
+                Your thoughtfulness and kind words truly made my day special.
+                <br>
+                Here's your virtual treat!</p>
+		</section>
+        <section>
+  <div class="image-grid">
+    <img src="https://cdn.shopify.com/s/files/1/0521/3929/4884/products/RedVelvetPastry1.jpg?v=1632143810" height="200px" width="300px" />
+    <img src="https://media.istockphoto.com/id/922783734/photo/assorted-indian-recipes-food-various.jpg?s=612x612&w=0&k=20&c=p8DepvymWfC5j7c6En2UsQ6sUM794SQMwceeBW3yQ9M=" height="200px" />
+    <img src="https://cf0316.s3.amazonaws.com/cookificom/menu/12/444c90.jpg" height="200px" />
+    <img src="https://thumbs.dreamstime.com/b/pizza-coke-wooden-table-42087861.jpg" height="200px" />
+  </div>
+</section>
+		<section>
+			<p>Hope you had fun and enjoyed the "Virtual Treat"!<br> Once again thank you for your wishes!<br><br><b>~Manthan</b></p>
+		</section>
+	</main>
+</body>
+</html>
+`;
+    document.getElementById("content").innerHTML = text;
+    </script>
+</body>
+</html>
